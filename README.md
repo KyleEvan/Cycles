@@ -4,10 +4,8 @@ HTML5 Canvas Game, Cycles - a suspenseful math learning experience
 ## Gameplay Instructions
 Cycles is a simplistic, but challenging, mathematical learning game for anyone looking to improve their basic multiplication skills or anyone who enjoys playing quick, exciting games. The objective is to survive longer than the enemy. The player controls the red cycle and the computer controls the blue cycle.
 
-diagram-1
-[[https://github.com/KyleEvan/Cycles/tree/master/pictures/instructions-1.jpg]]
 ![Alt text](/pictures/instructions-1.jpg?raw=true "Screenshot 1")
-<img src="/pictures/instructions-1.jpg" style="width:200px; height:auto;"/>
+<img src="/pictures/instructions-1.jpg" width="200" height="auto" />
 If either cycle runs into any trail or line, including the center boundary, it will be destroyed and that player will lose the game.
 Cycles move forward automatically and only require the player to turn them. In order to steer your cycle you must solve the mathematical operation that corresponds with the direction which you would like to turn.
 
