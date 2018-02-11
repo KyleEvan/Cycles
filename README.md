@@ -1,6 +1,7 @@
 # Cycles
 
 HTML5 Canvas Game, Cycles - a suspenseful math learning experience
+
 Play the <a href="https://kyleevan.github.io/Cycles/">Demo</a>
 
 ## Gameplay Instructions
@@ -25,5 +26,9 @@ For example, at the start of the game you are given these four operations shown 
 Type in the numerical answer (supports num pad inputs) then press 'Enter' to submit your answer. If your answer is correct, the cycle will change direction, otherwise it will continue moving in the same direction.
 
 ![Alt text](/pictures/instructions-3.jpg?raw=true "Screenshot 3")
+
+## Support
+
+Desktop only, IE 11+, still testing..
 
 Play the <a href="https://kyleevan.github.io/Cycles/">Demo</a>.
