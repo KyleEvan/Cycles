@@ -7,7 +7,7 @@ Cycles is a simplistic, but challenging, mathematical learning game for anyone l
 diagram-1
 [[https://github.com/KyleEvan/Cycles/tree/master/pictures/instructions-1.jpg]]
 ![Alt text](/pictures/instructions-1.jpg?raw=true "Screenshot 1")
-
+<img src="/pictures/instructions-1.jpg" style="width:200px; height:auto;"/>
 If either cycle runs into any trail or line, including the center boundary, it will be destroyed and that player will lose the game.
 Cycles move forward automatically and only require the player to turn them. In order to steer your cycle you must solve the mathematical operation that corresponds with the direction which you would like to turn.
 
