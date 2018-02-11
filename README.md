@@ -1,5 +1,7 @@
 # Cycles
+
 HTML5 Canvas Game, Cycles - a suspenseful math learning experience
+Play the <a href="https://kyleevan.github.io/Cycles/">Demo</a>
 
 ## Gameplay Instructions
 
@@ -24,4 +26,4 @@ Type in the numerical answer (supports num pad inputs) then press 'Enter' to sub
 
 ![Alt text](/pictures/instructions-3.jpg?raw=true "Screenshot 3")
 
-Play the Demo.
+Play the <a href="https://kyleevan.github.io/Cycles/">Demo</a>.
