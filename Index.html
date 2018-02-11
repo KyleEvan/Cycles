@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+<link href="projectStyle.css" rel="stylesheet"/>
+<title>Cycles Instructions</title>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/calculate.js"></script>
+<script src="js/cycle.js"></script>
+<script src="js/enemyCycle.js"></script>
+<script src="js/calcDistances.js"></script>
+</head>
+<body>
+
+<div id="centerBox">
+	<div class="controls" id="controlsUp"><label id="upValueOne">0</label> x <label id="upValueTwo">0</label></div>
+	
+		<div class="controls" id="controlsLeft"><label id="leftValueOne">0</label> x <label id="leftValueTwo">0</label></div>
+		
+			<input type="text" id="inputText"/>
+			
+				<div class="controls" id="controlsRight"><label id="rightValueOne">0</label> x <label id="rightValueTwo">0</label></div>
+	
+					<div class="controls" id="controlsDown"><label id="downValueOne">0</label> x <label id="downValueTwo">0</label></div>
+
+</div>	
+
+		<canvas id="gameCanvas" width="1000" height ="800" tabindex='1'></canvas>
+			<canvas id="topCanvas" width="1000" height ="800"></canvas>
+				<canvas id="squareCanvas" width="1000" height ="800"></canvas>
+	
+<div id="footer" style="font-family:'Press Start 2P';"><em>Cycles:</em> by Kyle Peterson</div>
+			
+</body>
+</html>

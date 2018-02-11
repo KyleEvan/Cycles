@@ -1,0 +1,160 @@
+/*Index ****************************/
+	#gameCanvas{
+		z-index:0;
+		position:absolute;
+		top:20px;
+		left:20px;
+		border-style:solid;
+		border-color:rgb(0,255,255);
+		background-color:black;
+	
+	}
+	#topCanvas{
+		z-index:-1;
+		position:absolute;
+		top:20px;
+		left:20px;
+		border-style:solid;
+		border-color:rgb(0,255,255);
+		
+	}
+	#squareCanvas{
+		z-index:-2;
+		position:absolute;
+		top:20px;
+		left:20px;
+		border-style:solid;
+		border-color:rgb(0,255,255);
+	
+	}
+	
+	#inputText{
+		width:57px;
+		z-index: 1;
+		border-style:solid;
+		background-color:black;
+		display: inline-block;
+		color:rgb(0,255,255);
+		text-align:center;			
+	}
+	
+	div.controls{
+		z-index:2;
+		width:75px;
+		text-align:center;
+		color:rgb(0,255,255);
+		font-family:'Press Start 2P';
+		font-size:60%;
+	}
+	#controlsUp{
+		padding-top:14px;
+		padding-bottom:14px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	#controlsDown{
+		padding-top:14px;
+		padding-bottom:14px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	#controlsLeft{
+		display: inline-block;
+	}
+	#controlsRight{
+		display: inline-block;
+	}
+	#centerBox{
+		z-index: 1;
+		position:absolute;
+		/*top:270px;
+		left:257.5px;*/
+		width:225px;
+		height:100px;
+	}	
+	#footer{
+		position:relative;
+		font-size:70%;
+		color:white;
+		color:#363636;
+	}
+/*Index 1 ************************/
+	body{
+		background-color:#000000;
+		font-family: verdana;
+	}
+	#content{
+		margin-left:auto;
+		margin-right:auto;
+		width:50%;
+		border-style:solid;
+		border-color:#05B8CC;
+		padding: 0 1em 1em 1em;
+		color:#C8C8C8;
+
+		font-size:12px;
+	}
+	#header{
+		font-family:'Press Start 2P', cursive;
+		margin-bottom:0;
+		color:#05B8CC;
+		line-height:100px;
+		padding-top:10px;
+		border-bottom:solid 2px #05B8CC;
+	}
+	#headerWrapper{
+		height:100px;
+	}
+
+	.images{
+		width:100%;
+	}
+	.images2{
+		width:60%;
+		margin-left:20%;
+		margin-right:20%;
+	}
+	#instructions{
+		width:70%;
+		margin-left:auto;
+		margin-right:auto;
+		padding-top:30px;
+		padding-bottom:20px;
+	}
+	#play{
+		width:100px; 
+		margin-left:auto; 
+		margin-right:auto;
+		text-align:center;
+		font-size:20px;
+		color:#05B8CC;
+		font-family:'Press Start 2P';
+	}
+	h2,h3{
+		font-family: 'Allerta Stencil', sans-serif;
+		margin-bottom:0;
+		padding-bottom:0;
+		color:#05B8CC;
+	}
+	
+	h3{
+		color: white;
+	}
+	
+	li{
+		margin-bottom: 1em;
+	}
+	a{
+		color:#05B8CC;
+	}
+	#play:hover{
+		color:white;
+		cursor:pointer;
+	}
+	
+	a:visited{
+		text-decoration:none;
+	}
+	section{
+		border-bottom: solid 1px #05B8CC;
+	}
