@@ -1,6 +1,6 @@
 # Cycles
 
-HTML5 Canvas Game, Cycles - a suspenseful math learning experience
+HTML5 Canvas Game, Cycles - an intense multiplication learning experience
 
 Play the <a target="_blank" href="https://kyleevan.github.io/Cycles/">Demo</a>
 
