@@ -4,7 +4,7 @@ var app = app || {};
 app.cycle ={
 	x:undefined,
 	y:undefined,
-	speed:1.2,
+	speed:.9,
 	imageData:undefined,
 	pixels:undefined,
 	dead:undefined,
@@ -17,16 +17,16 @@ app.cycle ={
 		this.dead = false;
 		this.x = canvas.width*.75;
 		this.y = 10;
-		ctx.lineWidth = 3;	
+		ctx.lineWidth = 3;
 		ctx.beginPath();
 		ctx.moveTo(this.x,this.y);
 	},
 	update: function(start){
-	
+
 		ctx.strokeStyle="red";
 		ctx.lineTo(this.x,this.y);
 		ctx.stroke();
-		
+
 		if(start)this.steer();
 		this.draw();
 	},
@@ -39,7 +39,7 @@ app.cycle ={
 			ctx.fillRect(this.x-1,this.y-2,2,4);
 			ctx.fillRect(this.x-2,this.y-1,4,2);
 			ctx.fillStyle="rgb(255,182,99)";
-			ctx.fillRect(this.x-1,this.y-1,2,2);		
+			ctx.fillRect(this.x-1,this.y-1,2,2);
 	},
 	moveUp: function(){
 		this.y -= this.speed;
@@ -70,7 +70,7 @@ app.cycle ={
 			}
 			if(app.calculate.right==true){
 				this.moveRight();
-			}	
+			}
 		}
 	},
 	checkCollision: function(a,b,c,d){
@@ -82,7 +82,7 @@ app.cycle ={
 		if(a <= 0 || a>= canvas.width || b <= 0 || b >= canvas.height){
 			this.dead = true;
 		}
-	
+
 	}
 
 };

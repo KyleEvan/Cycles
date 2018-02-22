@@ -41,7 +41,7 @@ app.main ={
 			// hide centerbox to start
 			var cb = $('#centerBox');
 			cb.css("visibility", "hidden");
-			
+
 			this.drawMenu();
 			//ctx.fillStyle="black";
 			//ctx.fillRect(0,0,700,600);
@@ -63,7 +63,7 @@ app.main ={
 			this.rightAnswer = this.rightNumA*this.rightNumB;
 			//runs the checkConflict function in calculate
 			app.calculate.checkConflict(this.upAnswer,this.downAnswer,this.leftAnswer,this.rightAnswer);
-			
+
 			if(app.cycle.dead || app.enemyCycle.dead){
 				this.start = false; // stop the cyles from moving
 				this.gameState = this.game_state_end;
@@ -75,7 +75,7 @@ app.main ={
 			topCtx.drawImage(squareCanvas,0,0);
 			//Draw player cycle
 			app.cycle.update(this.start);
-			//Draw enemy cycle	
+			//Draw enemy cycle
 			app.enemyCycle.enemyUpdate(this.start);
 		}
 		if(this.gameState == this.game_state_end){
@@ -85,10 +85,10 @@ app.main ={
 				this.drawGameOver("Blue","rgb(30,144,255)")
 			}else if(app.enemyCycle.dead){
 				this.drawGameOver("Red","red");
-			}	
+			}
 		}
 		//this.lastTime = new Date();
-		requestAnimationFrame(this.draw.bind(this));	
+		requestAnimationFrame(this.draw.bind(this));
 	},
 
 	//readText fires when the ENTER key is pressed
@@ -98,10 +98,10 @@ app.main ={
 			app.calculate.first = false;
 			app.calculate.checkMath();
 			input.value = "";
-		}	
+		}
 	},
 
-	initRandomize: function(){	
+	initRandomize: function(){
 		var z = app.main.maxNum;
 		document.getElementById("upValueOne").innerHTML = Math.floor((Math.random()*z)+1);
 		document.getElementById("upValueTwo").innerHTML = Math.floor((Math.random()*z)+1);
@@ -133,10 +133,10 @@ app.main ={
 		//this.startCount();
 		// set game state to main menu
 		this.gameState = this.game_state_menu;
-		
-				
+
+
 			/* Positions centerbox */
-							
+
 			var game = $('#gameCanvas');
 			var offset = game.offset();
 			var width = $('#centerBox').width();
@@ -146,15 +146,15 @@ app.main ={
 				"left":coords.x,
 				"top":coords.y
 			});
-							
-							
-				
-		//Call draw method		
+
+
+
+		//Call draw method
 		this.draw();
 	},
 	timedCount:function(){
 		this.countdown --;
-		if(this.countdown >= 0){		
+		if(this.countdown >= 0){
 			setTimeout(function(){app.main.timedCount()},1000);
 		}
 		else{
@@ -173,8 +173,8 @@ app.main ={
 		//topCtx.clearRect(0,0,canvas.width,canvas.height);
 		topCtx.fillText(this.countdown,canvas.width/2,canvas.height/2);
 	},
-	changeGameState:function(e){	
-		if(e.keyCode == "32"){	
+	changeGameState:function(e){
+		if(e.keyCode == "32"){
 			if(app.main.gameState == app.main.game_state_menu){
 				app.main.gameState = app.main.game_state_play;
 				app.main.timedCount();
@@ -190,7 +190,7 @@ app.main ={
 		ctx.textAlign = "center";
 		ctx.textBaseline = "middle";
 		ctx.fillStyle = "white";
-		ctx.font="90px 'Press Start 2P'";
+		ctx.font="60px 'Press Start 2P'";
 		ctx.fillText("Cycles", canvas.width/2, canvas.height/2 - 50);
 		ctx.font="14px 'Press Start 2P'";
 		ctx.fillText("( Press 'Space' to Play )", canvas.width/2, canvas.height/2 + 30);
@@ -234,5 +234,3 @@ window.onload = function(){
 	this.input = document.getElementById("inputText");
 	app.main.ready();
 };
-
-

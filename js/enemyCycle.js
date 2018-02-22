@@ -6,7 +6,7 @@ app.enemyCycle ={
 	ay:undefined,
 	//x:undefined,
 	//y:undefined,
-	speed:1.2,
+	speed:.9,
 	moveUp:true,
 	moveDown:false,
 	moveLeft:false,
@@ -33,7 +33,7 @@ app.enemyCycle ={
 		topCtx.lineWidth = 3;
 		topCtx.strokeStyle="rgb(30,144,255)";
 		topCtx.beginPath();
-		topCtx.moveTo(this.ax,this.ay);	
+		topCtx.moveTo(this.ax,this.ay);
 	},
 	enemyUpdate: function(start){
 
@@ -104,8 +104,8 @@ app.enemyCycle ={
 	//UP / DOWN
 		if(this.moveUp == true || this.moveDown == true){
 			this.leftValue = app.calcDistances.calcDist(0,this.ay,this.ax-3,1,this.ax-3,this.ax,this.ax);
-			
-			this.rightValue = app.calcDistances.calcDist(this.ax+3,this.ay,canvas.width-this.ax+3,1,canvas.width-this.ax+3,0,canvas.width - this.ax);		
+
+			this.rightValue = app.calcDistances.calcDist(this.ax+3,this.ay,canvas.width-this.ax+3,1,canvas.width-this.ax+3,0,canvas.width - this.ax);
 		}
 	//LEFT / RIGHT
 		if(this.moveLeft == true || this.moveRight == true){
@@ -116,16 +116,16 @@ app.enemyCycle ={
 	},
 	checkFront: function(){
 		if(this.moveUp){
-			this.frontValue = app.calcDistances.calcDist(this.ax,0,1,this.ay-3,this.ay-3,this.ay,this.ay);		
+			this.frontValue = app.calcDistances.calcDist(this.ax,0,1,this.ay-3,this.ay-3,this.ay,this.ay);
 		}
 		if(this.moveDown){
-			this.frontValue = app.calcDistances.calcDist(this.ax,this.ay+3,1,canvas.height-this.ay+3,canvas.height-this.ay+3,0,canvas.height - this.ay);	
+			this.frontValue = app.calcDistances.calcDist(this.ax,this.ay+3,1,canvas.height-this.ay+3,canvas.height-this.ay+3,0,canvas.height - this.ay);
 		}
 		if(this.moveLeft){
 			this.frontValue = app.calcDistances.calcDist(0,this.ay,this.ax-3,1,this.ax-3,this.ax,this.ax);
 		}
 		if(this.moveRight){
-			this.frontValue = app.calcDistances.calcDist(this.ax+3,this.ay,canvas.width-this.ax+3,1,canvas.width-this.ax+3,0,canvas.width - this.ax);	
+			this.frontValue = app.calcDistances.calcDist(this.ax+3,this.ay,canvas.width-this.ax+3,1,canvas.width-this.ax+3,0,canvas.width - this.ax);
 		}
 	},
 	checkTurn: function(){
@@ -133,25 +133,25 @@ app.enemyCycle ={
 			this.turnArray.push(this.frontValue);
 			this.turnArray.push(this.leftValue);
 			this.turnArray.push(this.rightValue);
-			this.turnArray.sort(function(a,b){return b-a});		
+			this.turnArray.sort(function(a,b){return b-a});
 		}
 		if(this.moveDown){
 			this.turnArray.push(this.frontValue);
 			this.turnArray.push(this.leftValue);
 			this.turnArray.push(this.rightValue);
-			this.turnArray.sort(function(a,b){return b-a});	
+			this.turnArray.sort(function(a,b){return b-a});
 		}
 		if(this.moveLeft){
 			this.turnArray.push(this.frontValue);
 			this.turnArray.push(this.upValue);
 			this.turnArray.push(this.downValue);
-			this.turnArray.sort(function(a,b){return b-a});			
+			this.turnArray.sort(function(a,b){return b-a});
 		}
 		if(this.moveRight){
 			this.turnArray.push(this.frontValue);
 			this.turnArray.push(this.upValue);
 			this.turnArray.push(this.downValue);
-			this.turnArray.sort(function(a,b){return b-a});	
+			this.turnArray.sort(function(a,b){return b-a});
 		}
 	},
 	turn: function(){
@@ -159,7 +159,7 @@ app.enemyCycle ={
 			this.moveUp = false;
 				if(this.turnArray[0] == this.frontValue){
 					this.moveUp = true;
-					return;		
+					return;
 				}
 				if(this.turnArray[0] == this.leftValue){
 					this.moveLeft = true;
@@ -174,7 +174,7 @@ app.enemyCycle ={
 			this.moveDown = false;
 				if(this.turnArray[0] == this.frontValue){
 					this.moveDown = true;
-					return;		
+					return;
 				}
 				if(this.turnArray[0] == this.leftValue){
 					this.moveLeft = true;
@@ -189,7 +189,7 @@ app.enemyCycle ={
 			this.moveLeft = false;
 				if(this.turnArray[0] == this.frontValue){
 					this.moveLeft = true;
-					return;		
+					return;
 				}
 				if(this.turnArray[0] == this.upValue){
 					this.moveUp = true;
@@ -204,7 +204,7 @@ app.enemyCycle ={
 			this.moveRight = false;
 				if(this.turnArray[0] == this.frontValue){
 					this.moveRight = true;
-					return;		
+					return;
 				}
 				if(this.turnArray[0] == this.upValue){
 					this.moveUp = true;
@@ -225,7 +225,7 @@ app.enemyCycle ={
 		if(a <= 0 || a>= canvas.width || b <= 0 || b >= canvas.height){
 			this.dead = true;
 		}
-	
+
 	}
 	// enemyRandomMovement: function(){
 		// this.x = app.cycle.x;
@@ -233,8 +233,8 @@ app.enemyCycle ={
 		// var n;
 		// if(this.moveUp){
 
-				// if(Math.random()<this.turnProbability/60){			
-				// n = Math.random();			
+				// if(Math.random()<this.turnProbability/60){
+				// n = Math.random();
 					// if(this.ax > this.x){
 						// if(n<=.75){
 							// this.moveUp = false;
@@ -254,15 +254,15 @@ app.enemyCycle ={
 							// this.moveUp = false;
 							// this.moveLeft=true;
 							// return;
-						// }	
+						// }
 					// }
 				// }
-			
+
 		// }
 		// if(this.moveDown){
-			
-				// if(Math.random()<this.turnProbability/60){			
-					// n = Math.random();	
+
+				// if(Math.random()<this.turnProbability/60){
+					// n = Math.random();
 						// if(this.ax > this.x){
 							// if(n<=.75){
 								// this.moveDown = false;
@@ -282,14 +282,14 @@ app.enemyCycle ={
 								// this.moveDown = false;
 								// this.moveLeft=true;
 								// return;
-							// }	
+							// }
 						// }
 				// }
-			
+
 		// }
 		// if(this.moveLeft){
-			
-				// if(Math.random()<this.turnProbability/60){	
+
+				// if(Math.random()<this.turnProbability/60){
 					// n = Math.random();
 						// if(this.ay > this.y){
 							// if(n<=.75){
@@ -310,14 +310,14 @@ app.enemyCycle ={
 								// this.moveLeft = false;
 								// this.moveUp=true;
 								// return;
-							// }	
+							// }
 						// }
 				// }
-					
+
 		// }
 		// if(this.moveRight){
-			
-				// if(Math.random()<this.turnProbability/60){					
+
+				// if(Math.random()<this.turnProbability/60){
 					// n = Math.random();
 						// if(this.ay > this.y){
 							// if(n<=.75){
@@ -338,10 +338,10 @@ app.enemyCycle ={
 								// this.moveRight = false;
 								// this.moveUp=true;
 								// return;
-							// }	
+							// }
 						// }
-				// }	
-			
+				// }
+
 		// }
 	// }
 
