@@ -29,6 +29,6 @@ Type in the numerical answer (supports num pad inputs) then press 'Enter' to sub
 
 ## Support
 
-Desktop only, IE 11+, still testing..
+Desktop only, IE 11+
 
 Play the <a target="_blank" href="https://kyleevan.github.io/Cycles/">Demo</a>.
